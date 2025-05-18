@@ -1,0 +1,11 @@
+
+services:
+  rag-agent:
+    build: .
+    volumes:
+      - ./data:/app/data
+      - ./embeddings:/app/embeddings
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"  # API açacaksan buradan erişirsin

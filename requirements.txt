@@ -1,0 +1,9 @@
+langchain
+openai
+faiss-cpu
+beautifulsoup4
+requests
+python-dotenv
+sentence-transformers
+fastapi
+uvicorn
