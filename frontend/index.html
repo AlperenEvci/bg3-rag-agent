@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG3 Knowledge Assistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e1e1e1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #bb9d65;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+        }
+
+        .subtitle {
+            color: #8e7d57;
+            font-size: 1.2rem;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            display: flex;
+            gap: 10px;
+        }
+        
+        input[type="text"] {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #333;
+            border-radius: 4px;
+            background: #1e1e1e;
+            color: #e1e1e1;
+            font-size: 16px;
+        }
+        
+        button {
+            background-color: #bb9d65;
+            color: #121212;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        
+        button:hover {
+            background-color: #d4b678;
+        }
+        
+        .results-container {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+        
+        .result-card {
+            background-color: #1e1e1e;
+            border-left: 4px solid #bb9d65;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .result-title {
+            color: #bb9d65;
+            font-size: 1.3rem;
+            margin: 0 0 10px 0;
+        }
+        
+        .result-url {
+            color: #7d9bbb;
+            margin-bottom: 10px;
+        }
+        
+        .result-url a {
+            color: #7d9bbb;
+            text-decoration: none;
+        }
+        
+        .result-url a:hover {
+            text-decoration: underline;
+        }
+        
+        .result-content {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        
+        .result-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .tag {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 15px;
+            padding: 3px 10px;
+            font-size: 0.8em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(187, 157, 101, 0.3);
+            border-radius: 50%;
+            border-top-color: #bb9d65;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Tab styling */
+        .tab-container {
+            margin-bottom: 20px;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #333;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        
+        .tab.active {
+            background-color: #bb9d65;
+            color: #121212;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+            padding-top: 20px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .answer-container {
+            background-color: #1e1e1e;
+            border-left: 4px solid #7d9bbb;
+            border-radius: 4px;
+            padding: 20px;
+            margin-top: 20px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Baldur's Gate 3 Knowledge Assistant</h1>
+        <div class="subtitle">Ask me anything about classes, builds, lore, and game mechanics</div>
+    </header>
+    
+    <main>
+        <div class="tab-container">
+            <div class="tabs">
+                <div class="tab active" data-tab="search">Search Knowledge Base</div>
+                <div class="tab" data-tab="query">Ask a Question</div>
+            </div>
+
+            <div id="search-tab" class="tab-content active">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="query-input" placeholder="What do you want to know about Baldur's Gate 3?" 
+                               autofocus>
+                        <button id="search-button">Search</button>
+                    </div>
+                    <div>
+                        <label for="results-number">Results: </label>
+                        <input type="number" id="results-number" min="1" max="10" value="3" style="width: 60px;">
+                    </div>
+                </div>
+            </div>
+
+            <div id="query-tab" class="tab-content">
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="question-input" placeholder="Ask a specific question about Baldur's Gate 3">
+                        <button id="ask-button">Ask</button>
+                    </div>
+                </div>
+                <div id="answer-container" style="display: none;" class="answer-container">
+                    <!-- Answer will be displayed here -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching the realms of knowledge...</p>
+        </div>
+        
+        <div class="results-container" id="results-container">
+            <!-- Results will be injected here -->
+        </div>
+    </main>
+
+    <script>
+        const API_URL = 'http://localhost:8000/search';
+        const QUERY_URL = 'http://localhost:8000/query';
+        
+        // Tab functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.dataset.tab;
+                
+                // Update active tab
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                tab.classList.add('active');
+                
+                // Show corresponding content
+                document.querySelectorAll('.tab-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+                
+                // Clear results when switching tabs
+                document.getElementById('results-container').innerHTML = '';
+                document.getElementById('answer-container').style.display = 'none';
+            });
+        });
+        
+        document.getElementById('search-button').addEventListener('click', performSearch);
+        document.getElementById('query-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+        
+        document.getElementById('ask-button').addEventListener('click', askQuestion);
+        document.getElementById('question-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                askQuestion();
+            }
+        });
+        
+        async function performSearch() {
+            const query = document.getElementById('query-input').value;
+            const topK = parseInt(document.getElementById('results-number').value) || 3;
+            
+            if (!query) return;
+            
+            const loadingElement = document.getElementById('loading');
+            const resultsContainer = document.getElementById('results-container');
+            
+            loadingElement.style.display = 'block';
+            resultsContainer.innerHTML = '';
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query, top_k: topK })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                loadingElement.style.display = 'none';
+                
+                if (data.results && data.results.length > 0) {
+                    data.results.forEach(result => {
+                        resultsContainer.appendChild(createResultCard(result));
+                    });
+                } else {
+                    resultsContainer.innerHTML = '<p>No results found. Try a different query.</p>';
+                }
+                
+            } catch (error) {
+                console.error('Error fetching results:', error);
+                loadingElement.style.display = 'none';
+                resultsContainer.innerHTML = `<p>Error fetching results. Please try again later. (${error.message})</p>`;
+            }
+        }
+        
+        async function askQuestion() {
+            const question = document.getElementById('question-input').value;
+            
+            if (!question) return;
+            
+            const loadingElement = document.getElementById('loading');
+            const answerContainer = document.getElementById('answer-container');
+            const resultsContainer = document.getElementById('results-container');
+            
+            loadingElement.style.display = 'block';
+            answerContainer.style.display = 'none';
+            resultsContainer.innerHTML = '';
+            
+            try {
+                const response = await fetch(QUERY_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ query: question })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                loadingElement.style.display = 'none';
+                answerContainer.style.display = 'block';
+                answerContainer.textContent = data.answer || "I don't have enough information to answer that question.";
+                
+            } catch (error) {
+                console.error('Error querying:', error);
+                loadingElement.style.display = 'none';
+                answerContainer.style.display = 'block';
+                answerContainer.textContent = `Error: ${error.message}. Please try again later.`;
+            }
+        }
+        
+        function createResultCard(result) {
+            const card = document.createElement('div');
+            card.className = 'result-card';
+            
+            const title = document.createElement('h2');
+            title.className = 'result-title';
+            title.textContent = result.title;
+            
+            const url = document.createElement('div');
+            url.className = 'result-url';
+            const link = document.createElement('a');
+            link.href = result.url;
+            link.target = '_blank';
+            link.textContent = result.url;
+            url.appendChild(link);
+            
+            const content = document.createElement('div');
+            content.className = 'result-content';
+            // Try to get content from chunk_id or metadata
+            content.textContent = result.content || `Chunk ID: ${result.chunk_id}`;
+            
+            const tagsContainer = document.createElement('div');
+            tagsContainer.className = 'result-tags';
+            
+            if (result.tags && result.tags.length) {
+                result.tags.forEach(tag => {
+                    const tagElement = document.createElement('span');
+                    tagElement.className = 'tag';
+                    tagElement.textContent = tag;
+                    tagsContainer.appendChild(tagElement);
+                });
+            }
+            
+            card.appendChild(title);
+            card.appendChild(url);
+            card.appendChild(content);
+            card.appendChild(tagsContainer);
+            
+            return card;
+        }
+    </script>
+    
+</body>
+</html>

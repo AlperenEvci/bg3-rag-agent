@@ -71,6 +71,45 @@ docker-compose up
 docker-compose run --rm rag-agent python src/tests/query_test.py
 ```
 
+## Running the Frontend
+
+### Option 1: Simple Method
+
+Use the included helper script to start both API and frontend:
+
+```pwsh
+# Start both API server and frontend
+python start_app.py
+```
+
+This will:
+
+1. Start the FastAPI server on port 8000
+2. Start a simple HTTP server for the frontend on port 3000
+3. Automatically open your browser to the frontend
+
+### Option 2: Manual Setup
+
+If you prefer to run them separately:
+
+1. Start the API server:
+
+```pwsh
+# Start the API using main.py CLI
+python main.py serve
+# OR directly with uvicorn
+uvicorn src.api:app --host 0.0.0.0 --port 8000 --reload
+```
+
+2. Serve the frontend:
+
+```pwsh
+cd frontend
+python -m http.server 3000
+```
+
+3. Open your browser to: http://localhost:3000
+
 ## Requirements
 
 - Docker & Docker Compose (recommended)
