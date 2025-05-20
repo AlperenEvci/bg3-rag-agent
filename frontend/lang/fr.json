@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Assistant de Connaissances Baldur's Gate 3",
+  "siteSubtitle": "Votre guide à travers les Royaumes Oubliés",
+  "search": {
+    "tabTitle": "Rechercher dans la Base de Connaissances",
+    "placeholder": "Ex., 'Meilleurs exploits pour un Paladin' ou 'Quête de Shadowheart'",
+    "buttonText": "Rechercher",
+    "maxResults": "Résultats Maximum:",
+    "noResults": "Aucun résultat trouvé. Essayez une requête différente.",
+    "error": "Erreur lors de la récupération des résultats. Veuillez réessayer plus tard."
+  },
+  "query": {
+    "tabTitle": "Poser une Question",
+    "placeholder": "Posez une question spécifique...",
+    "buttonText": "Demander au Sage",
+    "noAnswer": "Je n'ai pas assez d'informations pour répondre à cette question.",
+    "error": "Erreur: {0}. Veuillez réessayer plus tard."
+  },
+  "history": {
+    "tabTitle": "Historique des Conversations",
+    "title": "Vos Consultations Précédentes",
+    "loadMore": "Consulter les Archives",
+    "noHistory": "Aucun historique de conversation trouvé. Commencez par poser une question!",
+    "error": "Erreur lors de la récupération de l'historique des conversations. ({0})"
+  },
+  "loading": "Consultation des anciens parchemins...",
+  "languageSelector": "Langue",
+  "languages": {
+    "en": "Anglais",
+    "es": "Espagnol",
+    "fr": "Français",
+    "tr": "Turc"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Baldur's Gate 3 Bilgi Asistanı",
+  "siteSubtitle": "Unutulmuş Diyarlar'daki rehberiniz",
+  "search": {
+    "tabTitle": "Bilgi Bankasında Ara",
+    "placeholder": "Örn., 'Bir Paladin için en iyi yetenekler' veya 'Shadowheart'ın görevi'",
+    "buttonText": "Ara",
+    "maxResults": "Maks Sonuç:",
+    "noResults": "Sonuç bulunamadı. Farklı bir sorgu deneyin.",
+    "error": "Sonuçlar getirilirken hata oluştu. Lütfen daha sonra tekrar deneyin."
+  },
+  "query": {
+    "tabTitle": "Soru Sor",
+    "placeholder": "Belirli bir soru sorun...",
+    "buttonText": "Bilgeye Sor",
+    "noAnswer": "Bu soruyu yanıtlamak için yeterli bilgim yok.",
+    "error": "Hata: {0}. Lütfen daha sonra tekrar deneyin."
+  },
+  "history": {
+    "tabTitle": "Konuşma Geçmişi",
+    "title": "Önceki Danışmalarınız",
+    "loadMore": "Arşivlere Göz At",
+    "noHistory": "Konuşma geçmişi bulunamadı. Bir soru sorarak başlayın!",
+    "error": "Konuşma geçmişi getirilirken hata oluştu. ({0})"
+  },
+  "loading": "Kadim parşömenler inceleniyor...",
+  "languageSelector": "Dil",
+  "languages": {
+    "en": "İngilizce",
+    "es": "İspanyolca",
+    "fr": "Fransızca",
+    "tr": "Türkçe"
+  }
+}

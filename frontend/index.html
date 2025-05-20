@@ -207,10 +207,58 @@
             border-radius: 50%;
             border-top-color: #d4af37; /* Vibrant gold */
             animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
+        }        @keyframes spin {
             to { transform: rotate(360deg); }
+        }
+        
+        /* Language selector styling */
+        .language-selector {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .language-selector label {
+            color: #d4af37;
+            font-weight: bold;
+        }
+        
+        .language-selector select {
+            background-color: #1a1410;
+            color: #e0d1b0;
+            border: 1px solid #4a3b2a;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        .language-selector select:hover {
+            border-color: #d4af37;
+        }        .language-selector select option {
+            background-color: #1a1410;
+            color: #e0d1b0;
+        }
+        
+        /* Notification styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(139, 69, 19, 0.9);
+            color: #e0d1b0;
+            padding: 15px 20px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: none;
+            border-left: 4px solid #d4af37;
+            font-weight: bold;
+            transform: translateY(-50px);
+            opacity: 0;
         }
         
         /* Tab styling */
@@ -264,59 +312,60 @@
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Baldur's Gate 3 Knowledge Assistant</h1>
-        <div class="subtitle">Your guide through the Forgotten Realms</div> <!-- More thematic subtitle -->
+<body>    <header>
+        <h1 data-i18n="siteTitle">Baldur's Gate 3 Knowledge Assistant</h1>
+        <div class="subtitle" data-i18n="siteSubtitle">Your guide through the Forgotten Realms</div>
+        <div class="language-selector">
+            <label for="language-select" data-i18n="languageSelector">Language:</label>
+            <select id="language-select">
+                <option value="en" data-i18n="languages.en">English</option>
+                <option value="es" data-i18n="languages.es">Spanish</option>
+                <option value="fr" data-i18n="languages.fr">French</option>
+                <option value="tr" data-i18n="languages.tr">Turkish</option>
+            </select>
+        </div>
     </header>
     
-    <main>        <div class="tab-container">
-            <div class="tabs">
-                <div class="tab active" data-tab="search">Search Knowledge Base</div>
-                <div class="tab" data-tab="query">Ask a Question</div>
-                <div class="tab" data-tab="history">Conversation History</div>
-            </div>
-
-            <div id="search-tab" class="tab-content active">
+    <main>        <div class="tab-container">            <div class="tabs">
+                <div class="tab active" data-tab="search" data-i18n="search.tabTitle">Search Knowledge Base</div>
+                <div class="tab" data-tab="query" data-i18n="query.tabTitle">Ask a Question</div>
+                <div class="tab" data-tab="history" data-i18n="history.tabTitle">Conversation History</div>
+            </div>            <div id="search-tab" class="tab-content active">
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" id="query-input" placeholder="E.g., 'Best feats for a Paladin' or 'Shadowheart's quest'"
+                        <input type="text" id="query-input" data-i18n-placeholder="search.placeholder" placeholder="E.g., 'Best feats for a Paladin' or 'Shadowheart's quest'"
                                autofocus>
-                        <button id="search-button">Search</button>
+                        <button id="search-button" data-i18n="search.buttonText">Search</button>
                     </div>
                     <div>
-                        <label for="results-number">Max Results: </label> <!-- Clarified label -->
+                        <label for="results-number" data-i18n="search.maxResults">Max Results: </label>
                         <input type="number" id="results-number" min="1" max="10" value="3" style="width: 60px; background-color: #1a1410; color: #e0d1b0; border: 1px solid #4a3b2a;">
                     </div>
                 </div>
-            </div>
-
-            <div id="query-tab" class="tab-content">
+            </div>            <div id="query-tab" class="tab-content">
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" id="question-input" placeholder="Ask a specific question...">
-                        <button id="ask-button">Ask the Sage</button> <!-- Thematic button text -->
+                        <input type="text" id="question-input" data-i18n-placeholder="query.placeholder" placeholder="Ask a specific question...">
+                        <button id="ask-button" data-i18n="query.buttonText">Ask the Sage</button>
                     </div>
                 </div>
                 <div id="answer-container" style="display: none;" class="answer-container">
                     <!-- Answer will be displayed here -->
                 </div>
             </div>
-            
-            <div id="history-tab" class="tab-content">
+              <div id="history-tab" class="tab-content">
                 <div class="history-container">
-                    <h2 class="history-title">Your Previous Consultations</h2>
+                    <h2 class="history-title" data-i18n="history.title">Your Previous Consultations</h2>
                     <div id="history-list">
                         <!-- History items will be injected here -->
                     </div>
-                    <button id="load-more-history" class="history-toggle">Consult the Archives</button>
+                    <button id="load-more-history" class="history-toggle" data-i18n="history.loadMore">Consult the Archives</button>
                 </div>
             </div>
         </div>
-        
-        <div class="loading" id="loading">
+          <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>Consulting the ancient scrolls...</p> <!-- Thematic loading text -->
+            <p data-i18n="loading">Consulting the ancient scrolls...</p>
         </div>
         
         <div class="results-container" id="results-container">
@@ -412,14 +461,14 @@
                     data.results.forEach(result => {
                         resultsContainer.appendChild(createResultCard(result));
                     });
-                } else {
-                    resultsContainer.innerHTML = '<p>No results found. Try a different query.</p>';
+                } else {                resultsContainer.innerHTML = '<p>No results found. Try a different query.</p>';
                 }
                 
             } catch (error) {
                 console.error('Error fetching results:', error);
                 loadingElement.style.display = 'none';
-                resultsContainer.innerHTML = `<p>Error fetching results. Please try again later. (${error.message})</p>`;
+                const errorMsg = getTranslation('search.error');
+                resultsContainer.innerHTML = `<p>${errorMsg} (${error.message})</p>`;
             }
         }
         
@@ -464,17 +513,17 @@
                 if (!currentSessionId && data.session_id) {
                     currentSessionId = data.session_id;
                     localStorage.setItem('sessionId', currentSessionId);
-                }
-                
+                }                
                 loadingElement.style.display = 'none';
                 answerContainer.style.display = 'block';
-                answerContainer.textContent = data.answer || "I don't have enough information to answer that question.";
+                answerContainer.textContent = data.answer || getTranslation('query.noAnswer');
                 
             } catch (error) {
                 console.error('Error querying:', error);
                 loadingElement.style.display = 'none';
                 answerContainer.style.display = 'block';
-                answerContainer.textContent = `Error: ${error.message}. Please try again later.`;
+                const errorTemplate = getTranslation('query.error');
+                answerContainer.textContent = errorTemplate.replace('{0}', error.message);
             }
         }
         
@@ -522,11 +571,10 @@
                         historyListElement.appendChild(createHistoryItem(item));
                     });
                     
-                    // Show load more button only if we received the full batch
-                    loadMoreButton.style.display = data.history.length === historyLimit ? 'inline-block' : 'none';
+                    // Show load more button only if we received the full batch                    loadMoreButton.style.display = data.history.length === historyLimit ? 'inline-block' : 'none';
                 } else {
                     if (offset === 0) {
-                        historyListElement.innerHTML = '<p>No conversation history found. Start by asking a question!</p>';
+                        historyListElement.innerHTML = `<p>${getTranslation('history.noHistory')}</p>`;
                     }
                     loadMoreButton.style.display = 'none';
                 }
@@ -535,7 +583,8 @@
                 console.error('Error fetching history:', error);
                 loadingElement.style.display = 'none';
                 if (offset === 0) {
-                    historyListElement.innerHTML = `<p>Error fetching conversation history. (${error.message})</p>`;
+                    const errorTemplate = getTranslation('history.error');
+                    historyListElement.innerHTML = `<p>${errorTemplate.replace('{0}', error.message)}</p>`;
                 }
             }
         }
@@ -644,10 +693,106 @@
                     duration: 200,
                     easing: 'easeOutSine'
                 });
-            });
-
-            return card;
+            });            return card;
         }
+        
+        // Language functionality
+        let currentLanguage = localStorage.getItem('bg3-language') || 'en';
+        let translations = {};        // Load translations
+        async function loadTranslations(lang) {
+            const loadingElement = document.getElementById('loading');
+            loadingElement.style.display = 'block';
+
+            try {
+                // First try to load the requested language
+                const response = await fetch(`./lang/${lang}.json`);
+                
+                if (response.ok) {
+                    const langData = await response.json();
+                    translations = langData;
+                    currentLanguage = lang;
+                    document.getElementById('language-select').value = lang;
+                    localStorage.setItem('bg3-language', lang);
+                    applyTranslations();
+                    loadingElement.style.display = 'none';
+                    showLanguageChangeNotification(lang);
+                    return true;
+                } else {
+                    throw new Error(`Failed to load language: ${lang}`);
+                }
+            } catch (error) {
+                console.error(`Error loading translations for ${lang}:`, error);
+                
+                // Only fall back to English if explicitly requested or if it's the initial load
+                if (localStorage.getItem('bg3-language') === null && lang !== 'en') {
+                    try {
+                        const enResponse = await fetch(`./lang/en.json`);
+                        if (enResponse.ok) {
+                            translations = await enResponse.json();
+                            currentLanguage = 'en';
+                            document.getElementById('language-select').value = 'en';
+                            localStorage.setItem('bg3-language', 'en');
+                            applyTranslations();
+                        }
+                    } catch (fallbackError) {
+                        console.error('Failed to load fallback language (English):', fallbackError);
+                    }
+                } else {
+                    // If loading fails, keep the current translations
+                    document.getElementById('language-select').value = currentLanguage;
+                }
+                
+                loadingElement.style.display = 'none';
+                return false;
+            }
+        }
+        
+        // Get translation by key
+        function getTranslation(key) {
+            // Support nested keys like 'search.buttonText'
+            const keys = key.split('.');
+            let value = translations;
+            
+            for (const k of keys) {
+                if (value && typeof value === 'object' && k in value) {
+                    value = value[k];
+                } else {
+                    console.warn(`Translation key not found: ${key}`);
+                    return key; // Return the key itself as fallback
+                }
+            }
+            
+            return value;
+        }
+        
+        // Apply translations to all elements with data-i18n attribute
+        function applyTranslations() {
+            // Regular text content
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                element.textContent = getTranslation(key);
+            });
+            
+            // Placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-i18n-placeholder');
+                element.placeholder = getTranslation(key);
+            });
+        }
+          // Language selector change handler
+        document.getElementById('language-select').addEventListener('change', async function() {
+            const newLanguage = this.value;
+            if (newLanguage !== currentLanguage) {
+                const success = await loadTranslations(newLanguage);
+                if (!success) {
+                    // If language loading fails, revert the selector to the previous language
+                    this.value = currentLanguage;
+                }
+            }
+        });
+        
+        // Initialize translations
+        loadTranslations(currentLanguage);
     </script>
     
 </body>

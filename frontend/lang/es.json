@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Asistente de Conocimiento de Baldur's Gate 3",
+  "siteSubtitle": "Tu guía por los Reinos Olvidados",
+  "search": {
+    "tabTitle": "Buscar Base de Conocimiento",
+    "placeholder": "Ej., 'Mejores dotes para un Paladín' o 'Misión de Shadowheart'",
+    "buttonText": "Buscar",
+    "maxResults": "Resultados Máximos:",
+    "noResults": "No se encontraron resultados. Intenta con una consulta diferente.",
+    "error": "Error al obtener resultados. Por favor, inténtalo más tarde."
+  },
+  "query": {
+    "tabTitle": "Hacer una Pregunta",
+    "placeholder": "Haz una pregunta específica...",
+    "buttonText": "Preguntar al Sabio",
+    "noAnswer": "No tengo suficiente información para responder esa pregunta.",
+    "error": "Error: {0}. Por favor, inténtalo más tarde."
+  },
+  "history": {
+    "tabTitle": "Historial de Conversación",
+    "title": "Tus Consultas Anteriores",
+    "loadMore": "Consultar los Archivos",
+    "noHistory": "No se encontró historial de conversación. ¡Comienza haciendo una pregunta!",
+    "error": "Error al obtener el historial de conversación. ({0})"
+  },
+  "loading": "Consultando los antiguos pergaminos...",
+  "languageSelector": "Idioma",
+  "languages": {
+    "en": "Inglés",
+    "es": "Español",
+    "fr": "Francés",
+    "tr": "Turco"
+  }
+}

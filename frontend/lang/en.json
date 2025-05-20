@@ -1,0 +1,34 @@
+{
+  "siteTitle": "Baldur's Gate 3 Knowledge Assistant",
+  "siteSubtitle": "Your guide through the Forgotten Realms",
+  "search": {
+    "tabTitle": "Search Knowledge Base",
+    "placeholder": "E.g., 'Best feats for a Paladin' or 'Shadowheart's quest'",
+    "buttonText": "Search",
+    "maxResults": "Max Results:",
+    "noResults": "No results found. Try a different query.",
+    "error": "Error fetching results. Please try again later."
+  },
+  "query": {
+    "tabTitle": "Ask a Question",
+    "placeholder": "Ask a specific question...",
+    "buttonText": "Ask the Sage",
+    "noAnswer": "I don't have enough information to answer that question.",
+    "error": "Error: {0}. Please try again later."
+  },
+  "history": {
+    "tabTitle": "Conversation History",
+    "title": "Your Previous Consultations",
+    "loadMore": "Consult the Archives",
+    "noHistory": "No conversation history found. Start by asking a question!",
+    "error": "Error fetching conversation history. ({0})"
+  },
+  "loading": "Consulting the ancient scrolls...",
+  "languageSelector": "Language",
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "fr": "French",
+    "tr": "Turkish"
+  }
+}
