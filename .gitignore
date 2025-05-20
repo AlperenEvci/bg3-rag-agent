@@ -7,3 +7,5 @@ src/__pycache__/llm.cpython-311.pyc
 src/__pycache__/llm.cpython-312.pyc
 src/__pycache__/rag_pipeline.cpython-311.pyc
 src/__pycache__/rag_pipeline.cpython-312.pyc
+/.venv
+/.vscode
