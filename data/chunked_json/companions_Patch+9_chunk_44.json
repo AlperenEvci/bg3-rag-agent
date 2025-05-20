@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "comes. Mentioning the Scrying Eye to Thrinn as a gnome no longer cuts the dialogue short. Fixed Gale repeating a line about Mayrina's resurrected husband.\n\nFixed multiplayer issue preventing clients from loading the game if both host and client are on GOG and connected via the Online tab. Removed Dart and Sling Proficiencies from Weapon Master feat. Locked inventories in multiplayer now remain locked. Fixed Level Up button not appearing after loading a savegame. Fixed hit chance percentage on cr",
+  "chunk_id": "companions_Patch+9_chunk_44"
+}

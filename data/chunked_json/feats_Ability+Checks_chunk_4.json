@@ -1,0 +1,14 @@
+{
+  "title": "Ability Check",
+  "url": "https://baldursgate3.wiki.fextralife.com/Ability+Checks",
+  "tags": [
+    "feats",
+    "ability checks and dc",
+    "making an ability check",
+    "ability check",
+    "ability modifier table",
+    "passive checks"
+  ],
+  "content": "lass is the number you must roll with the D20 to pass the ability check. The task difficulty when performing a DC are:\n\nVery Easy: 5 Easy: 10 Medium: 15 Hard: 20 Very Hard: 25 Nearly Impossible: 30\n\nFor Nearly impossible cases, you have to have a very high Ability Modifier, other bonuses and almost a perfect 20 roll on the die.\n\nFor example, if you are trying to open a door you cannot open and it has a Strength check DC of 15. Your character has 18 Strength, so he has an Ability Modifier +4. So ",
+  "chunk_id": "feats_Ability+Checks_chunk_4"
+}

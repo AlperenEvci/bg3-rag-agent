@@ -1,0 +1,16 @@
+{
+  "title": "Merchants",
+  "url": "https://baldursgate3.wiki.fextralife.com/Merchants",
+  "tags": [
+    "act 2",
+    "merchant inventory resets",
+    "act 1",
+    "merchant selling price",
+    "act 3",
+    "baldurs gate 3 merchants",
+    "items",
+    "merchants"
+  ],
+  "content": "of positive, or negative, attitude towards the player will decrease, or increase, the Merchant's selling price by 0.5% respectively. Positive attitude with NPCs is capped at +100, while negative attitude with friendly NPCs is capped at -45.\n\nThis information is shown in the following table:\n\nMerchant Sell Prices -45 Attitude 0 Attitude 25 Attitude 50 Attitude 75 Attitude 100 Attitude -2 Modifier 292.5% 270% 257.5% 245% 235.5% 220% -1 Modifier 282.5% 260% 247.5% 235% 225.5% 210% 0 Modifier 272.5%",
+  "chunk_id": "items_Merchants_chunk_7"
+}

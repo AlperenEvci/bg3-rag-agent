@@ -1,0 +1,15 @@
+{
+  "title": "Saving Throw",
+  "url": "https://baldursgate3.wiki.fextralife.com/Saving+Throw",
+  "tags": [
+    "companions",
+    "saving throw",
+    "modifiers",
+    "saving throw difficulty class",
+    "saving throw proficiency",
+    "saving throws and spells",
+    "making a saving throw"
+  ],
+  "content": "ted is always 8 + Proficiency Bonus + Spellcasting Ability Modifier.\n\nFor example, if your Druid casts the spell Call Lightning around a bunch of Goblins. The Druid is Level 5, so he has a Proficiency Bonus of +3, and his Wisdom is 18, so he has a Spellcasting Ability Modifier of +4. This means the DC of this Spell is 15 (8+3+4). Any Goblin who doesn't roll at least roll a 15, will take 3d10 damage (The sum of three rolls of a d10 die), and any who does will take half that amount.\n\nSaving Throws",
+  "chunk_id": "companions_Saving+Throw_chunk_6"
+}

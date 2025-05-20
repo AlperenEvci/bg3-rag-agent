@@ -1,0 +1,14 @@
+{
+  "title": "Ability Modifier",
+  "url": "https://baldursgate3.wiki.fextralife.com/Dexterity+Modifier",
+  "tags": [
+    "feats",
+    "ability checks",
+    "ability modifier table",
+    "saving throws",
+    "ability modifier",
+    "attack rolls"
+  ],
+  "content": "ving Throws use the Ability modifier to determine the outcome of the bonus or penalty.\n\nTo determine an Ability Modifier, subtract 10 to the Ability Score, then divide the result by two rounded down. For example, if you have 20 Strength, your ability score is 21 and your ability modifier (21 - 10 = 11) is +5 (11 / 2 = 5). If you have 6 Wisdom, then your ability Score is 6 (6 - 10 = -4) and your ability modifier is -2. (-4 / 2 = -2)\n\nAbility Checks are rolled when performing actions within the ga",
+  "chunk_id": "feats_Dexterity+Modifier_chunk_1"
+}

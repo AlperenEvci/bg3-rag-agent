@@ -1,0 +1,10 @@
+{
+  "title": "Savage Attacker",
+  "url": "https://baldursgate3.wiki.fextralife.com/Savage+Attacker",
+  "tags": [
+    "companions",
+    "savage attacker"
+  ],
+  "content": "d to attach any links to the wiki, sorry). Divide it by an average result of 1 roll (we can look at each dice pair individually because they are independent), which is (n+1)/2, and get a factor of (4n-1)/(3n) = 4/3 - 1/(3n). For example, for d6 the boost is 1.2(7) and for d12 it is 1.30(5). The difference is small, but it is there.",
+  "chunk_id": "companions_Savage+Attacker_chunk_5"
+}

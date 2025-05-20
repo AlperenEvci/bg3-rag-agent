@@ -1,0 +1,15 @@
+{
+  "title": "Rogue",
+  "url": "https://baldursgate3.wiki.fextralife.com/Rogue",
+  "tags": [
+    "bg3 rogue class features",
+    "spells",
+    "bg3 rogue class progression",
+    "rogue",
+    "rogue tips  builds",
+    "in other languages",
+    "bg3 rogue subclass features"
+  ],
+  "content": "d4Acid + 2d4 Acid (Delayed)\n\nShoot a green arrow that covers the target and the ground with acid.Deals 4~16 Acid damage immediately and 2~8 Acid damage at the end of the target's turn.1turnOn Miss: Target still takes half the initial damage\n\nCreate 3 illusory duplicates of yourself that distract attackers. Each duplicate increases your Armour Class by 3.Whenever you successfully evade an attack, one of the duplicates disappears.10 turnsRange: 18m\n\nSurrounded by silver mist, you teleport to an un",
+  "chunk_id": "spells_Rogue_chunk_53"
+}

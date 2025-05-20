@@ -1,0 +1,16 @@
+{
+  "title": "Merchants",
+  "url": "https://baldursgate3.wiki.fextralife.com/Merchants",
+  "tags": [
+    "act 2",
+    "merchant inventory resets",
+    "act 1",
+    "merchant selling price",
+    "act 3",
+    "baldurs gate 3 merchants",
+    "items",
+    "merchants"
+  ],
+  "content": "er + Proficiency Bonus, if proficient) and the Merchant's Attitude towards that character. If the character's Persuasion skill and the merchant's Attitude toward the character are both zero, the value the merchant pays on the item equals the item's base value divided by 3. Each point of Persuasion and each 20 points of Attitude reduce this divider by 0.1. Thus, the formula is:\n\nMerchant Buying Price = Item Base Value / ( 3 - Persuasion * 0.1 - Attitude * 0.005 )\n\nNote: The value is rounded to th",
+  "chunk_id": "items_Merchants_chunk_9"
+}

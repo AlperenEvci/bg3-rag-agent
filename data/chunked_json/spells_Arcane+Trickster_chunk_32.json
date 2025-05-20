@@ -1,0 +1,10 @@
+{
+  "title": "Arcane Trickster",
+  "url": "https://baldursgate3.wiki.fextralife.com/Arcane+Trickster",
+  "tags": [
+    "spells",
+    "arcane trickster"
+  ],
+  "content": "receives Disadvantage on Attack Rolls. 1 turn 18m INT\n\n1~10 Damage1d10 Fire\n\nHurl a mote of fire.18m INT\n\nProject a puff of noxious gas.3m CON Save INT\n\n1~8 Damage1d8 Cold\n\nReduce the target's Movement Speed by 3m. 1 turn18m INT\n\n1~8 Damage1d8 Lightning\n\nThe target cannot use reactions. This spell has Advantage on creatures with metal armour.1 turnMelee INT\n\nTake only half the damage from Bludgeoning, Piercing, and Slashing attacks. 2 Turns INT\n\nGain Advantage on Charisma Checks against a non-ho",
+  "chunk_id": "spells_Arcane+Trickster_chunk_32"
+}

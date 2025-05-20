@@ -1,0 +1,10 @@
+{
+  "title": "Cantrip",
+  "url": "https://baldursgate3.wiki.fextralife.com/Cantrip",
+  "tags": [
+    "spells",
+    "cantrip"
+  ],
+  "content": "main Booming Blade Evocation Action N/A Strike with your weapon, afflicting your foe with a resonance that hurts them for 1d8 Thunder damage when they move. 1 turns Melee Hexblade Bursting Sinew Necromancy Action N/A 1~10 Damage 1d10 Piercing Explode a corpse, causing it to impale those around it. 18m DEX Save Cleric, and Wizard Acid Splash Conjuration Action N/A 1~6 Damage1d6 Acid Throw a bubble of acid that damage each creature it hits 18m DEX Save Sorcerer, Wizard, Eldritch Knight Blade Ward ",
+  "chunk_id": "spells_Cantrip_chunk_3"
+}

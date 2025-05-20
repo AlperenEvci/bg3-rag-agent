@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "er, or party member via the Party Line no longer opens their Character Sheet. Fixed visual issues relating to targets' health bars. Items no longer change slot when added again through the Character Sheet. Fixed Throw UI closing when selecting an item. Fixed some Portuguese phrases running over their text boxes. Fixed stopwatch animation for Turn-Based Mode when switching from a character in combat to one in real-time. Clicking the upper half of character portraits now selects them correctly. Cu",
+  "chunk_id": "companions_Patch+9_chunk_46"
+}

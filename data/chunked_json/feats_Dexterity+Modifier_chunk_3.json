@@ -1,0 +1,14 @@
+{
+  "title": "Ability Modifier",
+  "url": "https://baldursgate3.wiki.fextralife.com/Dexterity+Modifier",
+  "tags": [
+    "feats",
+    "ability checks",
+    "ability modifier table",
+    "saving throws",
+    "ability modifier",
+    "attack rolls"
+  ],
+  "content": " Impossible: 30\n\nFor Nearly impossible cases, you have to have a very high Ability Modifier, other bonuses and almost a perfect 20 roll on the die.\n\nFor example, if you are trying to open a door you cannot open and it has a Strength check DC of 15. Your character has 18 Strength, so he has an Ability Modifier +4. So if you try to force it open, you have to roll the D20 and add +4 to that result. If the result is higher than 15, the door will be forced. However, if you should fail the roll nothin",
+  "chunk_id": "feats_Dexterity+Modifier_chunk_3"
+}

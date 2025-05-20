@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "miliars.* Fixed a floating brain jar and some buggy viscous chairs on the nautiloid. A pillar on the nautiloid is no longer destructible. You can now interact with the plaques in the grove.* Fixed a forest tree causing the 'Can't see!' error when trying to move a boulder. You can now loot a chest at the Goblin Camp without turning all of Grymforge hostile. Fixed random bottles with missing text appearing in the Traveller's Chest after leaving a minicamp. You can now use the Adamantine Forge more",
+  "chunk_id": "companions_Patch+9_chunk_39"
+}

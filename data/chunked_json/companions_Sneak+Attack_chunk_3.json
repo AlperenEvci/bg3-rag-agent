@@ -1,0 +1,10 @@
+{
+  "title": "Sneak Attack (Melee)",
+  "url": "https://baldursgate3.wiki.fextralife.com/Sneak+Attack",
+  "tags": [
+    "companions",
+    "sneak attack melee"
+  ],
+  "content": " action, but when set to be triggered automatically under your character's Spellbook > Reactions tab. Here you can set conditions for the trigger. This allows you to combine Sneak Attack with Weapon Actions and other types of attacks. Note, however, that using Sneak Attack as a separate action can be done in addition to having it set up as a reaction. Using it as your primary attack (when not doing Weapon Actions) will prevent you from accidentally attacking when you don't have Advantage. Some w",
+  "chunk_id": "companions_Sneak+Attack_chunk_3"
+}

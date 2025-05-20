@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "o Character Creation. Characters who attempt to play an instrument they're not Proficient with now fail spectacularly. Removed non-wizard spell scrolls from NPCs except Revivify, Summon Quasit, True Resurrection, and Speak with Dead. Added shop triggers. If you try to pick up items owned by certain traders, they will offer to trade. Mage Hand no longer prevents you from summoning Ranger's Companions and familiars. Made Quarterstaffs Versatile.* You now accrue dirt and blood more slowly, Prone ma",
+  "chunk_id": "companions_Patch+9_chunk_4"
+}

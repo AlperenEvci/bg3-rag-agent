@@ -1,0 +1,19 @@
+{
+  "title": "Combat",
+  "url": "https://baldursgate3.wiki.fextralife.com/Combat",
+  "tags": [
+    "companions",
+    "20 sided die guide",
+    "baldurs gate 3 combat",
+    "skill and ability mechanics",
+    "difficulty modes",
+    "companions vs hirelings",
+    "weapon armor mechanics",
+    "tactician mode",
+    "special items",
+    "combat",
+    "combat system"
+  ],
+  "content": "alculate the Spellcasting Ability modifier:\n\nClerics, Druids, and Rangers use Wisdom Wizards, Fighters (Eldritch Knight), and Rogues (Arcane Trickster) use Intelligence Bards, Paladins, Sorcerers, and Warlocks use Charisma\n\nThe DC to resist one of your spells is calculated as 8 your Proficiency Bonus + your Spellcasting Ability Modifier.\n\nFor example, a 5th-level Druid casts the 3rd-level spell Call Lightning around a group of Goblins, forcing these Goblins to make a Dexterity saving throw. At 5",
+  "chunk_id": "companions_Combat_chunk_33"
+}

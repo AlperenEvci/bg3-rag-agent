@@ -1,0 +1,10 @@
+{
+  "title": "Savage Attacker",
+  "url": "https://baldursgate3.wiki.fextralife.com/Savage+Attacker",
+  "tags": [
+    "companions",
+    "savage attacker"
+  ],
+  "content": "aling crit damage with a longsword and using a Level 2 Smite (total of 8d8) would go from dealing 36 + STR to 46.4 + STR - This is excellent to get if you're using Smite a lot, and want to deal more damage. This feat works better for bigger dice than for smaller ones (e.g. d12 benefits more than d6). For an n-sided dice, the expected value of the maximum value of 2 throws is (n+1)(4n-1)/(6n). Its easy enough to calculate yourself (I am not allowed to attach any links to the wiki, sorry). Divide ",
+  "chunk_id": "companions_Savage+Attacker_chunk_4"
+}

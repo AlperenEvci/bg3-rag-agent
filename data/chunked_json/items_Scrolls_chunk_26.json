@@ -1,0 +1,11 @@
+{
+  "title": "Scrolls",
+  "url": "https://baldursgate3.wiki.fextralife.com/Scrolls",
+  "tags": [
+    "scrolls information",
+    "items",
+    "scrolls"
+  ],
+  "content": "creature you touch regains hit points equal to 1d8 + your spellcasting ability modifier.\n\nThis spell has no effect on undead or constructs.\n\nScroll of Feather Fall\n\nSlow the rate of descent of allied creatures. Grants immunity to Falling damage.\n\nScroll of Ray of Sickness\n\nCall forth of sickening energy. Deals 2d8 Poison damage and possibly Poisons the target.\n\nScroll of Invisibility\n\nTouch a creature to turn it Invisible.\n\nThe spell ends early if the creature attacks or casts a spell.\n\nScroll o",
+  "chunk_id": "items_Scrolls_chunk_26"
+}

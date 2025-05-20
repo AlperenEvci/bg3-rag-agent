@@ -1,0 +1,13 @@
+{
+  "title": "Thrown",
+  "url": "https://baldursgate3.wiki.fextralife.com/Thrown",
+  "tags": [
+    "thrown",
+    "weapon types that have thrown",
+    "weapons",
+    "thrown information",
+    "thrown notes  tips"
+  ],
+  "content": " grant different weapon types, diverse features that are intrinsic to that specific weapon type.\n\nThrown Information\n\nA melee weapon with this property can be thrown for a ranged attack, and will benefit from the creature's Ability Score Modifier (Strength) and Proficiency Bonus as usual, instead of being treated as an Improvised Weapon. This combines with the Finesse property: if you throw a Dagger, which has both Thrown and Finesse, you can use your Dexterity Modifier for the attack and damage",
+  "chunk_id": "weapons_Thrown_chunk_1"
+}

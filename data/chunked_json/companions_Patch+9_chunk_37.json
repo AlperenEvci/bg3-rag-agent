@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "ing redcaps from taking their turn. Fixed enemies skipping their actions if they had grouped initiative. Fixed the camera getting stuck when fighting the bulette. Fixed the camera panning to the target in Combat Cam view. Fixed a join-leave loop when the Foundation Block at the Chapel falls on a familiar.* Fixed Saving Throw Proficiencies of NPC wizards.\n\nYou can block gas pits with crates again. Made many unreachable items reachable.* Ensured that the Headband of Intellect sits comfortably on m",
+  "chunk_id": "companions_Patch+9_chunk_37"
+}

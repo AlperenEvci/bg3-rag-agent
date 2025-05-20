@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "ou now accrue dirt and blood more slowly, Prone makes you a bit dirtier, and Wet cleans you.\n\nCrashes and Blockers\n\nFixed crash when loading savegames. Fixed crash when adjusting UI settings. Fixed crash when selling items that don't belong in Trade view. Fixed crash when repeatedly preparing to Throw. Fixed blocker when playing Gale's flute after killing a magma mephit. Fixed blocker when running past Mirkon towards the harpies.\n\nAdded a Smart AI to increase behavioural differences between anim",
+  "chunk_id": "companions_Patch+9_chunk_5"
+}

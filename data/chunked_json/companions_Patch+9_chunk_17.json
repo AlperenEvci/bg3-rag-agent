@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "tch Bolt no longer needs you to pick a target and deals damage to all linked targets. Great Old One warlocks now have access to Phantasmal Force. Agonising Blast is now part of Eldritch Blast's initial damage. Cloud of Daggers and Moonbeam now remove Curse of Regret from targets. Minor Illusion is now only dispelled if an NPC passes a Perception check.\n\nStory and Continuity\n\nMade the game better at tracking which items are stolen. Removed the enthralled fishermen at the crash site. Gribbo and he",
+  "chunk_id": "companions_Patch+9_chunk_17"
+}

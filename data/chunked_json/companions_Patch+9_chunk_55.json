@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "SFX when dropping Soul Coins. Added SFX for closing windows with ESC.\n\nFixed VFX glitches, particularly on fur and hair. Fixed Gale looking bald when viewed from a distance.* Female gnomes no longer get a Shadowheart-inspired hairstyle when equipping Studded Leather Armour. Fixed ochre jelly bleeding red blood. Fixed invisible floors on the nautiloid. Added VFX for breaking the log bridge between the forest and Goblin Camp. Fixed blood and dirt not appearing correctly on clothing and armour. Fix",
+  "chunk_id": "companions_Patch+9_chunk_55"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "inicamp. You can now use the Adamantine Forge more than once. Moved a buggy chest in the Festering Cove. You can now move the loose stone in Grymforge. Fixed an issue preventing you from stacking items from above.\n\nSpells, Actions, and Conditions\n\nYou no longer remain Prone after a Long Rest. Sleep no longer affects those immune to being Charmed. Lesser Restoration can no longer remove Charmed. Armour of Agathys can no longer damage attackers that use a Throw attack. Targeting AoE spells at your",
+  "chunk_id": "companions_Patch+9_chunk_40"
+}

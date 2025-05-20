@@ -1,0 +1,19 @@
+{
+  "title": "Combat",
+  "url": "https://baldursgate3.wiki.fextralife.com/Combat",
+  "tags": [
+    "companions",
+    "20 sided die guide",
+    "baldurs gate 3 combat",
+    "skill and ability mechanics",
+    "difficulty modes",
+    "companions vs hirelings",
+    "weapon armor mechanics",
+    "tactician mode",
+    "special items",
+    "combat",
+    "combat system"
+  ],
+  "content": "nemy, the game uses the D20 system to generate a random number between 1 and 20.\n\nTo determine success, the game adds various modifiers, such as a character's proficiency bonus, ability scores, and other situational bonuses or penalties. If the final result of the roll plus modifiers meets or exceeds a specific Difficulty Class (DC) or an opponent's Armor Class (AC), the action succeeds. If the total is lower than the DC or AC, the action fails. This provides an element of chance and randomness ",
+  "chunk_id": "companions_Combat_chunk_20"
+}

@@ -1,0 +1,10 @@
+{
+  "title": "Greataxes",
+  "url": "https://baldursgate3.wiki.fextralife.com/Greataxes",
+  "tags": [
+    "weapons",
+    "greataxes"
+  ],
+  "content": "leaveLaceratePrepare\n\nBlooded Greataxe\n\n1d12 +1 Slashing\n\nWeapon Enchantment +1\n\nRelentless Revenge: When the wielder has 50% Hit Points or less, they deal an additional 1~4 Slashing damage.\n\nCleaveLaceratePrepare\n\nDefender Greataxe\n\nWeapon Enchantment +2\n\nDefensive Attack: When making your first attack of the round, you can reduce this weapon's enchantment by 1 to increase your Armour Class and Saving Throw bonus by 1.\n\nCleaveLaceratePrepare\n\nHellfire Greataxe\n\nWeapon Enchantment +2\n\nThermodyna",
+  "chunk_id": "weapons_Greataxes_chunk_7"
+}

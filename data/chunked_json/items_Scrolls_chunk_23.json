@@ -1,0 +1,11 @@
+{
+  "title": "Scrolls",
+  "url": "https://baldursgate3.wiki.fextralife.com/Scrolls",
+  "tags": [
+    "scrolls information",
+    "items",
+    "scrolls"
+  ],
+  "content": " Missile\n\nScroll of Acid Arrow\n\nShoot a green arrow that bursts in a spray of acid. Deals 4d4 Acid immdiatly and 2d4 Acid at the end of the target's turn.\n\nOn succesful save, the target only takes ahlf the initial damage.\n\nScroll of Hold Person\n\nScroll of False Life\n\nScroll of Summon Quasit\n\nScroll of Disguise Self\n\nMagically change all aspect of your appearance.\n\nScroll of Healing Word\n\nA creature you can see regains hit points equal to 1d4 + your spellcasting ability modifier.\n\nScroll of Blind",
+  "chunk_id": "items_Scrolls_chunk_23"
+}

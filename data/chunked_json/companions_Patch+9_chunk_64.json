@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "xed mind flayer issues before getting knocked out of nautiloid. Fixed clipping issues with cambion at nautiloid helm. Fixed dragon's head clipping through nautiloid. Fixed lighting pops, freezes, and misplaced altar at camp with Minthara. Fixed pop with Booyahg Piddle. Fixed Petrified Drow's head pop. Fixed Lurgan's head clipping in the Underdark. Fixed small races clipping into boat at Grymforge. Fixed party members clipping when hearing the Absolute at Grymforge. Fixed jitters with deep rothé.",
+  "chunk_id": "companions_Patch+9_chunk_64"
+}

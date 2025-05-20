@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "hostile if you kill one of their guards. If you help defend the grove, they'll forgive you. Improved the myconids' behaviour after Glut's revenge quest. The Avenge Glut's Circle quest now flows even if you killed Spaw before Gekh Coal.\n\nQuality of Life:\n\nRolls during dialogues now display the line you selected. When lockpicking or disarming, the roll now clearly indicates which tool you're using. Added a warning to the Reward pop-up and disabled the Claim button if you have a summon selected so ",
+  "chunk_id": "companions_Patch+9_chunk_19"
+}

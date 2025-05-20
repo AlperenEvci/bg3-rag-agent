@@ -1,0 +1,14 @@
+{
+  "title": "Ability Modifier",
+  "url": "https://baldursgate3.wiki.fextralife.com/Dexterity+Modifier",
+  "tags": [
+    "feats",
+    "ability checks",
+    "ability modifier table",
+    "saving throws",
+    "ability modifier",
+    "attack rolls"
+  ],
+  "content": " Class (DC), which the character must make a saving throw of the die against in order to protect themselves.\n\nTo make a saving throw, roll a D20 and add the appropriate Ability Modifier for the character. Just like Ability Checks and Attack Rolls, you must hit the target number or higher in order to succeed.\n\nAbility Modifier Table\n\nTo determine an Ability Modifier, subtract 10 to the Ability Score, then divide the result by two rounded down as shown in the table below.\n\nAbility Score Ability Mo",
+  "chunk_id": "feats_Dexterity+Modifier_chunk_6"
+}

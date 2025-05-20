@@ -1,0 +1,13 @@
+{
+  "title": "Warding Bond",
+  "url": "https://baldursgate3.wiki.fextralife.com/Warding+Bond",
+  "tags": [
+    "companions",
+    "warding bond information",
+    "warding bond",
+    "warding bond tips  notes",
+    "how to acquire warding bond"
+  ],
+  "content": "bably due to the game treating the redirect damage as if it is being dealt by the character that it is redirected from. BUG: if the spell caster has any effects which reflect damage whenever they take redirected damage this will reflect damage back to the target of the spell it was redirected from. The damage that is reflected is still treated as if it is being dealt by the character that is redirecting the damage, so if the character that is redirecting is wearing Callous Glow Ring they will do",
+  "chunk_id": "companions_Warding+Bond_chunk_8"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "Combat",
+  "url": "https://baldursgate3.wiki.fextralife.com/Combat",
+  "tags": [
+    "companions",
+    "20 sided die guide",
+    "baldurs gate 3 combat",
+    "skill and ability mechanics",
+    "difficulty modes",
+    "companions vs hirelings",
+    "weapon armor mechanics",
+    "tactician mode",
+    "special items",
+    "combat",
+    "combat system"
+  ],
+  "content": "ng character rolls the d20 and if the roll is equal or higher than the target's Armor Class (AC), then that attack hits the target with the equipped weapon.\n\nMelee weapons use the Strength ability modifier, while Ranged Weapons use the Dexterity ability modifier. There are some exceptions, such as melee weapons that have the finesse property. These melee weapons use Dexterity instead of Strength.\n\nIf you successfully connect the attack, your ability modifier is then added to your damage roll. Da",
+  "chunk_id": "companions_Combat_chunk_25"
+}

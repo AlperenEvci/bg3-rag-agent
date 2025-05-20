@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "tural Explorer rangers.\n\nRewrote all spell and action tooltips for clarity and brevity. Tooltips now expand (pin them or hold ALT) to show extra information. Tooltips now clearly indicate what happens if a spell or action misses or if the enemy Saves. Tooltips now clearly indicate the effect of upcasting. Tooltips for spells and actions that create a surface or summon now indicate what is created and its duration. Summon tooltips now indicate duration. Tooltips now indicate when spells and actio",
+  "chunk_id": "companions_Patch+9_chunk_21"
+}

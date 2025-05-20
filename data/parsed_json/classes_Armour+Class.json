@@ -1,0 +1,11 @@
+{
+  "title": "Armour Class",
+  "url": "https://baldursgate3.wiki.fextralife.com/Armour+Class",
+  "content": "Armour Class (Also called AC) is a mechanic in Baldur's Gate 3. Armour Class is what protects a Character from any attack that uses an Attack Roll, Spells included. The amount of protection you gain depends on the Armour you are wearing.\n\nArmour Class in Baldur's Gate 3\n\nYour Armour Class (AC) represents how well your character avoids being wounded in battle. Things that contribute to your AC include the Armour you wear, the Shield you carry, and your Dexterity modifier.\n\nCalculating Armour Class\n\nWithout Armour or a Shield, your character's AC equals 10 + their Dexterity modifier.\n\nIf your character wears Armour and carries a shield, both their AC will be combined. For example Padded Armour gives you 11 AC, which means an enemy must reach a total of 11 on the Attack Roll in order hit you. In addition, as Padded Armour is a Light Armour, so your Dexterity Modifier will be added to the total AC.\n\nWhen wearing Light Armour you gain the full value of your Dexterity modifier added to your Armour Class.\n\nWhen wearing Medium Armour, you gain up to +2 AC from your Dexterity modifier\n\nWhen wearing Heavy Armour you gain no benefit from your Dexterity modifier at all.\n\nIn Baldur's Gate 3, Using a Shield will increase your AC by +2.\n\nArmor Proficiency\n\nYour character needs to be proficient with Armour and shields to wear and use them effectively, and your Armour and shield proficiencies are determined by your class. There are drawbacks to wearing Armour or carrying a shield if you lack the required proficiency, as explained in chapter 5\n\nUnlike Weapons Proficiency, Armour Proficiency is essential or you will be facing serious penalties. Characters who wear Armour they aren't proficient with, cannot cast Spells and will have disadvantage on all Ability Checks, Saving Throws and Attack Rolls that involve Strength or Dexterity.",
+  "tags": [
+    "armor proficiency",
+    "armour class",
+    "classes",
+    "calculating armour class"
+  ]
+}

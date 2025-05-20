@@ -1,0 +1,11 @@
+{
+  "title": "Daylight",
+  "url": "https://baldursgate3.wiki.fextralife.com/Daylight",
+  "tags": [
+    "spells",
+    "daylight tips  notes for bg 3",
+    "daylight"
+  ],
+  "content": "caster back in camp. If the caster of this spell removes it from their prepared spells list, the spell's effect will end immediately. When Daylight is cast, it immediately removes any area of Darkness spell nearby, but a Darkness spell will remain if it is cast after a Daylight spell. Likewise, an item affected by Daylight (weapon carried by a character) will not remove any Darkness spell area and effect. In BG3, the most recent spell of Darkness or Daylight wins over, unlike the tabletop rules.",
+  "chunk_id": "spells_Daylight_chunk_4"
+}

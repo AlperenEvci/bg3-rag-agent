@@ -1,0 +1,10 @@
+{
+  "title": "The Adamantine Forge",
+  "url": "https://baldursgate3.wiki.fextralife.com/The+Adamantine+Forge",
+  "tags": [
+    "items",
+    "the adamantine forge"
+  ],
+  "content": "cale Mail Adamantine Shield Adamantine Longsword Adamantine Scimitar Adamantine Mace\n\nThere exists a bug where the forge crucible can no longer be interactable. This can happen if you remove the forged item during the fight with Grym. There's a bug where the lava won't flow away again, preventing the platform from being raised. This is easily resolved by going into turn-based mode and skipping a few turns. Note there's only 2 Mithral Ore in game. Note If the grym automaton doesn't die specifical",
+  "chunk_id": "items_The+Adamantine+Forge_chunk_15"
+}

@@ -1,0 +1,12 @@
+{
+  "title": "Attack Roll",
+  "url": "https://baldursgate3.wiki.fextralife.com/Attack+Roll",
+  "content": "Attack Roll is a mechanic in Baldur's Gate 3. Attack Rolls occur when a character is attacking another character. The attacking character rolls the D20 and if the roll is equal or higher than the target's Armour Class (AC), then that attack hits the target with the equipped weapon.\n\nAttack Roll in Baldur's Gate 3\n\nAttack Rolls occur when a character is attacking another character. The attacking character rolls the D20 and if the (modified) roll is equal or higher than the target's Armour Class (AC), then that attack hits the target with the Weapon or Spell (eg. Firebolt). Making a Ranged Attack, with a Spell or otherwise, when inside melee reach (Threatened) of an enemy that can react, is at a Disadvantage.\n\nAttack Roll Modifiers\n\nMelee Weapons use the Strength ability modifier, while Ranged Weapons use the Dexterity ability modifier. There are some exceptions, such as melee weapons that have the Finesse property. These melee weapons use whichever is higher out of Dexterity and Strength. Attack Rolls are also affected by your Proficiency with the weapon you are currently using. Some Spells require the caster to make an Attack Roll to determine whether the spell effect hits the intended target. Your Attack Bonus with a spell attack equals your Spellcasting Ability Modifier + your Proficiency bonus.\n\nCalculating Damage\n\nIf you successfully connect the attack, your Ability Modifier is then added to your damage roll. Damage rolls are calculated by rolling the die or dice of the weapon used and then adding the ability modifier. This means that you are not only more likely to hit with the weapon if you have high Strength or Dexterity, but you will do more damage if you do. This normally does not apply to spell attacks.",
+  "tags": [
+    "companions",
+    "attack roll",
+    "attack roll in baldurs gate 3",
+    "attack roll modifiers",
+    "calculating damage"
+  ]
+}

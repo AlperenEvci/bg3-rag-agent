@@ -1,0 +1,12 @@
+{
+  "title": "Knowledge Domain",
+  "url": "https://baldursgate3.wiki.fextralife.com/Knowledge+Domain",
+  "tags": [
+    "spells",
+    "knowledge domain",
+    "bg3 cleric class progression",
+    "all cleric spells gallery"
+  ],
+  "content": "entration\n\nCall forth a storm that disrupts the Concentration of spellcasters, douses fires, and creates an ice surface.\n\n18m 9m Concentration\n\nGrant a semblance of life to a humanoid corpse, allowing it to answer up to 5 questions.\n\nSPIRIT GUARDIANS\n\nCall forth spirits to protect you. Nearby enemies take 3-24 Radiant damage or 3-24 Necrotic damage per turn, and their movement speed is halved.\n\nOn Save: Targets still take half damageCaster can't become Invisible while concentrating on this spell",
+  "chunk_id": "spells_Knowledge+Domain_chunk_69"
+}

@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "n resolution to 1024x768 or 1280x720. Added non-gendered pronouns to Character Creation and started to phase them into dialogues. You can now open the menu with ESC during a roll. Removed the Party Management keybind. Temporarily removed the 'Show on Map' button. Added previews for Cloud Quality settings. Equipment slots no longer light up for non-controlled characters in multiplayer. Improved the error messages for connection errors in the multiplayer lobby and for being unable to join a sessio",
+  "chunk_id": "companions_Patch+9_chunk_25"
+}

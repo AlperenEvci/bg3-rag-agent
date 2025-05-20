@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "character portraits now selects them correctly. Cursor icon now updates when attacking interactable objects. If Halsin is burnt or dead, he now looks it in the Examine window. Fixed issues with lock-mouse-to-window setting and edge-panning.* Fixed potions not showing up correctly in Examine window.\n\nFixed width of tooltip titles to avoid overlapping text. Fixed wrong description showing up for rock gnomes' Artificer's Lore passive. Comparisons now work correctly for the Shield tooltip. Menacing ",
+  "chunk_id": "companions_Patch+9_chunk_47"
+}

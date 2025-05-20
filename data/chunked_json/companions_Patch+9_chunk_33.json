@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "rge can now spot you trying to Hide.\n\nNat 1s and Nat 20s no longer get bonuses and Proficiencies added to the final tally if you skip the roll animation.* Combat no longer ends prematurely if you're far from the enemies and have gone to Sleep. Combat now triggers if you choose to attack an NPC that caught you crimin'. NPCs can target Mayrina again. If the hag is Silenced, she can no longer teleport Mayrina away. Haseid can no longer land Critical Hits. Male Gith no longer fire two projectiles on",
+  "chunk_id": "companions_Patch+9_chunk_33"
+}

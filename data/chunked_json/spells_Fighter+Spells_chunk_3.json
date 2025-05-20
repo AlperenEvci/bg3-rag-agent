@@ -1,0 +1,10 @@
+{
+  "title": "Fighter Spells",
+  "url": "https://baldursgate3.wiki.fextralife.com/Fighter+Spells",
+  "tags": [
+    "fighter spells",
+    "spells"
+  ],
+  "content": "on Action 1~12 Damage 1d12 Poison Project a puff of noxious gas.3m CON Save INT Ray of Frost Cantrip Evocation Action 1~8 Damage1d8 Cold Reduce the target's Movement Speed by 3m. 1 turn18m INT Shocking Grasp Cantrip Evocation Action 1~8 Damage1d8 Lightning The target cannot use reactions. This spell has Advantage on creatures with metal armour.1 turnMelee INT Blade Ward Cantrip Abjuration Action Take only half the damage from Bludgeoning, Piercing, and Slashing attacks. 2 Turns INT Friends Cantr",
+  "chunk_id": "spells_Fighter+Spells_chunk_3"
+}

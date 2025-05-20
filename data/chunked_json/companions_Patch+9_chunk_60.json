@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": "ombat. Fixed Bardic Inspiration animation stopping prematurely. Fixed animation for weapons held by female characters when rotating the camera. You no longer get stuck in the falling or climbing animation. Recovered the animation for Produce Flame: Hurl. Fixed issue with the fingers of bards of small races when Performing. Fixed female halfling bards' hands clipping through lute while performing 'Power'. Fixed male dwarf and gnome bards' hands and knees clipping through lyres and violins. Fixed ",
+  "chunk_id": "companions_Patch+9_chunk_60"
+}

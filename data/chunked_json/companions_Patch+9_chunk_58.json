@@ -1,0 +1,13 @@
+{
+  "title": "Patch 9",
+  "url": "https://baldursgate3.wiki.fextralife.com/Patch+9",
+  "tags": [
+    "companions",
+    "fixes",
+    "tweaks",
+    "patch 9",
+    "balance"
+  ],
+  "content": " the Arcane Tower unwalkable. Halflings can now jump onto a cliff near where you first see Astarion. Made a specific rock in the Shattered Sanctum walkable. Fixed disappearing terrain when rotating camera into rocks in Secluded Chamber. Fixed terrain visibility and fading issues at the crash site. You can no longer land in awkward places when jumping into the Shattered Sanctum chasm. Fixed trees blocking access to Risen Road waypoint. Fixed camera getting stuck in Putrid Bog and near Goblin Camp",
+  "chunk_id": "companions_Patch+9_chunk_58"
+}
