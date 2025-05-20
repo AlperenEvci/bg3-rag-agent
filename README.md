@@ -4,6 +4,14 @@ A Retrieval-Augmented Generation (RAG) system and API for Baldur's Gate 3, enabl
 
 ---
 
+## Screenshots
+
+|                      Ask a Question Page                      |                         Conversation History                         |                         Search Knowledge Base Page                          |
+| :-----------------------------------------------------------: | :------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| ![Ask a Question](readme_screenshots/ask_a_question_page.png) | ![Conversation History](readme_screenshots/conversation_history.png) | ![Search Knowledge Base](readme_screenshots/search_knowledge_base_page.png) |
+
+---
+
 ## Key Features
 
 - **Wiki Data Ingestion:** Scrape and parse Baldur's Gate 3 wiki content into structured JSON.
