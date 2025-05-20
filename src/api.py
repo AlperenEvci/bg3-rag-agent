@@ -62,5 +62,5 @@ class QueryResponse(BaseModel):
 @app.post("/query")
 def query(request: QueryRequest):
     """Endpoint to handle queries using the RAG pipeline"""
-    response = qa_chain(request.query)
-    return {"answer": response}
+    response = qa_chain.invoke({"query": request.query})
+    return {"answer": response["result"]}

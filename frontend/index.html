@@ -6,9 +6,10 @@
     <title>BG3 Knowledge Assistant</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #121212;
-            color: #e1e1e1;
+            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* More thematic font */
+            background-color: #0f0a0a; /* Darker, more thematic background */
+            background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png"); /* Subtle texture */
+            color: #e0d1b0; /* Softer text color */
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
@@ -18,16 +19,17 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            text-shadow: 0 0 10px #bb9d65; /* Add a glow to header text */
         }
         
         h1 {
-            color: #bb9d65;
-            font-size: 2.5rem;
+            color: #d4af37; /* More vibrant gold */
+            font-size: 2.8rem; /* Slightly larger */
             margin-bottom: 0;
         }
 
         .subtitle {
-            color: #8e7d57;
+            color: #a89060; /* Adjusted subtitle color */
             font-size: 1.2rem;
         }
         
@@ -46,54 +48,78 @@
         input[type="text"] {
             flex: 1;
             padding: 12px 15px;
-            border: 1px solid #333;
+            border: 1px solid #4a3b2a; /* Thematic border */
             border-radius: 4px;
-            background: #1e1e1e;
-            color: #e1e1e1;
+            background: #1a1410; /* Darker input background */
+            color: #e0d1b0;
             font-size: 16px;
         }
         
         button {
-            background-color: #bb9d65;
-            color: #121212;
-            border: none;
+            background-color: #8B4513; /* More of a leather/wood brown */
+            color: #e0d1b0;
+            border: 1px solid #5a2d0c;
             padding: 12px 20px;
             border-radius: 4px;
             cursor: pointer;
             font-weight: bold;
-            transition: background-color 0.2s;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added transform and box-shadow */
+            text-transform: uppercase; /* BG3 often uses uppercase */
+            letter-spacing: 1px;
         }
         
         button:hover {
-            background-color: #d4b678;
+            background-color: #A0522D; /* Lighter brown on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Shadow for depth */
         }
         
         .results-container {
-            border-top: 1px solid #333;
+            border-top: 1px solid #4a3b2a; /* Thematic border */
             padding-top: 20px;
         }
         
         .result-card {
-            background-color: #1e1e1e;
-            border-left: 4px solid #bb9d65;
+            background-color: rgba(26, 20, 16, 0.8); /* Slightly transparent dark background */
+            border-left: 4px solid #d4af37; /* Vibrant gold border */
             border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 20px; /* Increased padding */
+            margin-bottom: 20px; /* Increased margin */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover */
+            animation: fadeIn 0.5s ease-out forwards; /* Added fade-in animation */
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px) scale(1.02); /* Lift and slightly scale on hover */
+            box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2); /* Goldish glow on hover */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         .result-title {
-            color: #bb9d65;
-            font-size: 1.3rem;
+            color: #d4af37; /* Vibrant gold */
+            font-size: 1.4rem; /* Slightly larger */
             margin: 0 0 10px 0;
         }
         
         .result-url {
-            color: #7d9bbb;
+            color: #b0a080; /* Adjusted URL color */
             margin-bottom: 10px;
+            font-size: 0.9em;
         }
         
         .result-url a {
-            color: #7d9bbb;
+            color: #b0a080;
             text-decoration: none;
         }
         
@@ -113,11 +139,12 @@
         }
         
         .tag {
-            background-color: #2a2a2a;
-            border: 1px solid #444;
+            background-color: #3a2d1a; /* Darker, more thematic tag */
+            border: 1px solid #5a3d2a;
             border-radius: 15px;
-            padding: 3px 10px;
-            font-size: 0.8em;
+            padding: 4px 12px; /* Slightly larger padding */
+            font-size: 0.85em; /* Slightly larger font */
+            color: #e0d1b0;
         }
 
         .loading {
@@ -128,11 +155,11 @@
 
         .spinner {
             display: inline-block;
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(187, 157, 101, 0.3);
+            width: 50px; /* Larger spinner */
+            height: 50px;
+            border: 5px solid rgba(212, 175, 55, 0.2); /* Goldish transparent border */
             border-radius: 50%;
-            border-top-color: #bb9d65;
+            border-top-color: #d4af37; /* Vibrant gold */
             animation: spin 1s ease-in-out infinite;
         }
 
@@ -151,19 +178,22 @@
         }
         
         .tab {
-            padding: 10px 20px;
-            background-color: #1e1e1e;
-            border: 1px solid #333;
+            padding: 12px 22px; /* Increased padding */
+            background-color: #1a1410;
+            border: 1px solid #4a3b2a;
             border-bottom: none;
             border-radius: 4px 4px 0 0;
             margin-right: 5px;
             cursor: pointer;
+            color: #b0a080; /* Thematic text color for inactive tabs */
+            transition: background-color 0.3s, color 0.3s;
         }
         
         .tab.active {
-            background-color: #bb9d65;
-            color: #121212;
+            background-color: #8B4513; /* Leather/wood brown for active tab */
+            color: #e0d1b0; /* Light text for active tab */
             font-weight: bold;
+            border-bottom: 1px solid #8B4513; /* Blend with content area */
         }
         
         .tab-content {
@@ -176,20 +206,22 @@
         }
         
         .answer-container {
-            background-color: #1e1e1e;
-            border-left: 4px solid #7d9bbb;
+            background-color: rgba(26, 20, 16, 0.8); /* Consistent with result cards */
+            border-left: 4px solid #8a6d3b; /* Different accent for answers */
             border-radius: 4px;
             padding: 20px;
             margin-top: 20px;
             white-space: pre-wrap;
             line-height: 1.6;
+            color: #e0d1b0; /* Ensure text color matches */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Baldur's Gate 3 Knowledge Assistant</h1>
-        <div class="subtitle">Ask me anything about classes, builds, lore, and game mechanics</div>
+        <div class="subtitle">Your guide through the Forgotten Realms</div> <!-- More thematic subtitle -->
     </header>
     
     <main>
@@ -202,13 +234,13 @@
             <div id="search-tab" class="tab-content active">
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" id="query-input" placeholder="What do you want to know about Baldur's Gate 3?" 
+                        <input type="text" id="query-input" placeholder="E.g., 'Best feats for a Paladin' or 'Shadowheart's quest'"
                                autofocus>
                         <button id="search-button">Search</button>
                     </div>
                     <div>
-                        <label for="results-number">Results: </label>
-                        <input type="number" id="results-number" min="1" max="10" value="3" style="width: 60px;">
+                        <label for="results-number">Max Results: </label> <!-- Clarified label -->
+                        <input type="number" id="results-number" min="1" max="10" value="3" style="width: 60px; background-color: #1a1410; color: #e0d1b0; border: 1px solid #4a3b2a;">
                     </div>
                 </div>
             </div>
@@ -216,8 +248,8 @@
             <div id="query-tab" class="tab-content">
                 <div class="search-container">
                     <div class="search-box">
-                        <input type="text" id="question-input" placeholder="Ask a specific question about Baldur's Gate 3">
-                        <button id="ask-button">Ask</button>
+                        <input type="text" id="question-input" placeholder="Ask a specific question...">
+                        <button id="ask-button">Ask the Sage</button> <!-- Thematic button text -->
                     </div>
                 </div>
                 <div id="answer-container" style="display: none;" class="answer-container">
@@ -228,7 +260,7 @@
         
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>Searching the realms of knowledge...</p>
+            <p>Consulting the ancient scrolls...</p> <!-- Thematic loading text -->
         </div>
         
         <div class="results-container" id="results-container">
