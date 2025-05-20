@@ -12,6 +12,14 @@ A Retrieval-Augmented Generation (RAG) system and API for Baldur's Gate 3, enabl
 
 ---
 
+## Data Source
+
+This project uses a comprehensive Baldur's Gate 3 wiki dataset, available at: [Hugging Face - AlperenEvci/baldurs-gate-3-wiki-scrapping](https://huggingface.co/datasets/AlperenEvci/baldurs-gate-3-wiki-scrapping)
+
+You can download and use this dataset for local processing, chunking, and embedding as described in the pipeline below.
+
+---
+
 ## Key Features
 
 - **Wiki Data Ingestion:** Scrape and parse Baldur's Gate 3 wiki content into structured JSON.
