@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BG3 Knowledge Assistant</title>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script> <!-- Added Anime.js -->
     <style>
         body {
             font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* More thematic font */
@@ -86,25 +87,17 @@
             padding: 20px; /* Increased padding */
             margin-bottom: 20px; /* Increased margin */
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Smooth transition for hover */
-            animation: fadeIn 0.5s ease-out forwards; /* Added fade-in animation */
+            /* transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; */ /* Replaced by Anime.js */
+            /* animation: fadeIn 0.5s ease-out forwards; */ /* Replaced by Anime.js */
+            opacity: 0; /* Start hidden for Anime.js animation */
         }
 
         .result-card:hover {
-            transform: translateY(-5px) scale(1.02); /* Lift and slightly scale on hover */
-            box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2); /* Goldish glow on hover */
+            /* transform: translateY(-5px) scale(1.02); */ /* Can be enhanced with Anime.js if desired */
+            /* box-shadow: 0 8px 15px rgba(212, 175, 55, 0.2); */
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        /* @keyframes fadeIn { ... } */ /* Removed as Anime.js will handle entrance */
         
         .result-title {
             color: #d4af37; /* Vibrant gold */
@@ -145,6 +138,59 @@
             padding: 4px 12px; /* Slightly larger padding */
             font-size: 0.85em; /* Slightly larger font */
             color: #e0d1b0;
+        }
+
+        /* History styling */
+        .history-container {
+            margin-top: 20px;
+            border-top: 1px solid #4a3b2a;
+            padding-top: 20px;
+        }
+        
+        .history-title {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .history-item {
+            background-color: rgba(26, 20, 16, 0.6);
+            border-left: 3px solid #8a6d3b;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            opacity: 0; /* Start hidden for Anime.js animation */
+        }
+        
+        .history-query {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #e0d1b0;
+        }
+        
+        .history-response {
+            white-space: pre-wrap;
+            line-height: 1.5;
+            color: #b0a080;
+        }
+        
+        .history-time {
+            color: #8e7d57;
+            font-size: 0.8rem;
+            text-align: right;
+            margin-top: 8px;
+        }
+        
+        .history-toggle {
+            background-color: #3a2d1a;
+            color: #e0d1b0;
+            border: 1px solid #5a3d2a;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 10px;
+            display: inline-block;
+            border-radius: 4px;
         }
 
         .loading {
@@ -224,11 +270,11 @@
         <div class="subtitle">Your guide through the Forgotten Realms</div> <!-- More thematic subtitle -->
     </header>
     
-    <main>
-        <div class="tab-container">
+    <main>        <div class="tab-container">
             <div class="tabs">
                 <div class="tab active" data-tab="search">Search Knowledge Base</div>
                 <div class="tab" data-tab="query">Ask a Question</div>
+                <div class="tab" data-tab="history">Conversation History</div>
             </div>
 
             <div id="search-tab" class="tab-content active">
@@ -256,6 +302,16 @@
                     <!-- Answer will be displayed here -->
                 </div>
             </div>
+            
+            <div id="history-tab" class="tab-content">
+                <div class="history-container">
+                    <h2 class="history-title">Your Previous Consultations</h2>
+                    <div id="history-list">
+                        <!-- History items will be injected here -->
+                    </div>
+                    <button id="load-more-history" class="history-toggle">Consult the Archives</button>
+                </div>
+            </div>
         </div>
         
         <div class="loading" id="loading">
@@ -266,11 +322,15 @@
         <div class="results-container" id="results-container">
             <!-- Results will be injected here -->
         </div>
-    </main>
-
-    <script>
+    </main>    <script>
         const API_URL = 'http://localhost:8000/search';
         const QUERY_URL = 'http://localhost:8000/query';
+        const HISTORY_URL = 'http://localhost:8000/history';
+        
+        // Store current session ID
+        let currentSessionId = localStorage.getItem('sessionId') || null;
+        let historyOffset = 0;
+        const historyLimit = 5;
         
         // Tab functionality
         document.querySelectorAll('.tab').forEach(tab => {
@@ -292,6 +352,11 @@
                 // Clear results when switching tabs
                 document.getElementById('results-container').innerHTML = '';
                 document.getElementById('answer-container').style.display = 'none';
+                
+                // Load history when switching to history tab
+                if (tabId === 'history') {
+                    loadConversationHistory();
+                }
             });
         });
         
@@ -307,6 +372,11 @@
             if (e.key === 'Enter') {
                 askQuestion();
             }
+        });
+        
+        document.getElementById('load-more-history').addEventListener('click', () => {
+            historyOffset += historyLimit;
+            loadConversationHistory(historyOffset);
         });
         
         async function performSearch() {
@@ -366,13 +436,22 @@
             answerContainer.style.display = 'none';
             resultsContainer.innerHTML = '';
             
-            try {
+            try {                // Create request body without null/undefined values
+                const requestBody = {
+                    query: question
+                };
+                
+                // Only add session_id if it exists
+                if (currentSessionId) {
+                    requestBody.session_id = currentSessionId;
+                }
+                
                 const response = await fetch(QUERY_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ query: question })
+                    body: JSON.stringify(requestBody)
                 });
                 
                 if (!response.ok) {
@@ -380,6 +459,12 @@
                 }
                 
                 const data = await response.json();
+                
+                // Store session ID if not already set
+                if (!currentSessionId && data.session_id) {
+                    currentSessionId = data.session_id;
+                    localStorage.setItem('sessionId', currentSessionId);
+                }
                 
                 loadingElement.style.display = 'none';
                 answerContainer.style.display = 'block';
@@ -391,6 +476,103 @@
                 answerContainer.style.display = 'block';
                 answerContainer.textContent = `Error: ${error.message}. Please try again later.`;
             }
+        }
+        
+        async function loadConversationHistory(offset = 0) {
+            const historyListElement = document.getElementById('history-list');
+            const loadingElement = document.getElementById('loading');
+            const loadMoreButton = document.getElementById('load-more-history');
+            
+            // Only clear the list if we're loading the first batch
+            if (offset === 0) {
+                historyListElement.innerHTML = '';
+            }
+            
+            loadingElement.style.display = 'block';
+            
+            try {                // Create request body without null/undefined values
+                const requestBody = {
+                    limit: historyLimit,
+                    offset: offset
+                };
+                
+                // Only add session_id if it exists
+                if (currentSessionId) {
+                    requestBody.session_id = currentSessionId;
+                }
+                
+                const response = await fetch(HISTORY_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                loadingElement.style.display = 'none';
+                
+                if (data.history && data.history.length > 0) {
+                    data.history.forEach(item => {
+                        historyListElement.appendChild(createHistoryItem(item));
+                    });
+                    
+                    // Show load more button only if we received the full batch
+                    loadMoreButton.style.display = data.history.length === historyLimit ? 'inline-block' : 'none';
+                } else {
+                    if (offset === 0) {
+                        historyListElement.innerHTML = '<p>No conversation history found. Start by asking a question!</p>';
+                    }
+                    loadMoreButton.style.display = 'none';
+                }
+                
+            } catch (error) {
+                console.error('Error fetching history:', error);
+                loadingElement.style.display = 'none';
+                if (offset === 0) {
+                    historyListElement.innerHTML = `<p>Error fetching conversation history. (${error.message})</p>`;
+                }
+            }
+        }
+        
+        function createHistoryItem(historyItem) {
+            const item = document.createElement('div');
+            item.className = 'history-item';
+            
+            const query = document.createElement('div');
+            query.className = 'history-query';
+            query.textContent = historyItem.query;
+            
+            const response = document.createElement('div');
+            response.className = 'history-response';
+            response.textContent = historyItem.response;
+            
+            const time = document.createElement('div');
+            time.className = 'history-time';
+            // Create a formatted date string
+            const date = new Date(historyItem.timestamp);
+            time.textContent = date.toLocaleString();
+            
+            item.appendChild(query);
+            item.appendChild(response);
+            item.appendChild(time);
+            
+            // Animate history item with Anime.js
+            anime({
+                targets: item,
+                opacity: [0, 1],
+                translateY: [10, 0],
+                duration: 500,
+                easing: 'easeOutExpo',
+                delay: 100
+            });
+            
+            return item;
         }
         
         function createResultCard(result) {
@@ -431,6 +613,39 @@
             card.appendChild(content);
             card.appendChild(tagsContainer);
             
+            // Animate card with Anime.js
+            anime({
+                targets: card,
+                opacity: [0, 1],
+                translateY: [20, 0],
+                scale: [0.95, 1],
+                duration: 500,
+                easing: 'easeOutExpo'
+            });
+            
+            // Optional: Add hover animation with Anime.js
+            card.addEventListener('mouseenter', () => {
+                anime({
+                    targets: card,
+                    translateY: -5,
+                    scale: 1.02,
+                    boxShadow: '0 8px 15px rgba(212, 175, 55, 0.2)',
+                    duration: 200,
+                    easing: 'easeOutSine'
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                anime({
+                    targets: card,
+                    translateY: 0,
+                    scale: 1,
+                    boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
+                    duration: 200,
+                    easing: 'easeOutSine'
+                });
+            });
+
             return card;
         }
     </script>
