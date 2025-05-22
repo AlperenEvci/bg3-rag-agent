@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, HTMLResponse, FileResponse
 from pydantic import BaseModel
 from typing import Optional
 from sentence_transformers import SentenceTransformer
@@ -10,6 +10,8 @@ import json
 import os
 import uuid
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 from src.rag_pipeline import qa_chain
 from src.db import init_db, add_conversation, get_conversation_history
 
@@ -20,6 +22,14 @@ MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 VECTORSTORE_DIR = "embeddings/bg3_vectorstore"
 
 app = FastAPI()
+
+# Add root route to redirect to index.html
+@app.get("/", response_class=HTMLResponse)
+async def root():
+    return RedirectResponse(url="/static/index.html")
+
+# Mount the static files directory
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 # Add custom exception handler for validation errors
 @app.exception_handler(RequestValidationError)

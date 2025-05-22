@@ -10,3 +10,5 @@ python-dotenv>=1.0.0
 sentence-transformers>=2.2.2
 fastapi
 uvicorn
+langchain_huggingface
+psycopg2-binary

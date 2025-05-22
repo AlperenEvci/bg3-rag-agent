@@ -6,11 +6,10 @@ from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
+import time
+import psycopg2
 from dotenv import load_dotenv
 
-# Define the database URL - adjust as needed for your local PostgreSQL setup
-# Format: postgresql://username:password@localhost:5432/database_name
-# Update the password below to match your actual PostgreSQL password
 # Load environment variables from .env file
 load_dotenv()
 
@@ -21,12 +20,49 @@ DB_HOST = os.getenv("DB_HOST")
 DB_PORT = os.getenv("DB_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
+# Function to wait for database to be ready
+def wait_for_database(retries=5, delay=2):
+    """
+    Wait for the PostgreSQL database to be available.
+    Retry mechanism for Docker startup sequence.
+    """
+    print(f"Attempting to connect to PostgreSQL at {DB_HOST}:{DB_PORT}...")
+    current_try = 0
+
+    while current_try < retries:
+        try:
+            conn = psycopg2.connect(
+                user=DB_USER,
+                password=DB_PASSWORD,
+                host=DB_HOST,
+                port=DB_PORT,
+                dbname="postgres"  # Connect to default postgres database first
+            )
+            conn.close()
+            print("Successfully connected to PostgreSQL!")
+            return True
+        except Exception as e:
+            current_try += 1
+            print(f"Connection attempt {current_try}/{retries} failed: {e}")
+            if current_try < retries:
+                print(f"Waiting {delay} seconds before retrying...")
+                time.sleep(delay)
+    
+    print("Failed to connect to the database after multiple attempts")
+    return False
+
+# Try to connect to the database first
+wait_for_database()
+
 # Construct database URL from environment variables
 DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
-
-# Create SQLAlchemy engine
-engine = create_engine(DATABASE_URL)
+# Create SQLAlchemy engine with extended timeout and retries
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"connect_timeout": 10},
+    pool_pre_ping=True,  # Verify connections before usage
+)
 
 # Create a base class for our ORM models
 Base = declarative_base()
